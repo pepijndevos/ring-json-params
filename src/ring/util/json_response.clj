@@ -1,9 +1,7 @@
 (ns ring.util.json-response
-  (:require [cheshire.core :as json])
-  (:use ring.util.response))
+  (:require [cheshire.core :as json]))
 
 (defn json-response [data]
-  (-> data
-    json/generate-string
-    response
-    (content-type "application/json")))
+  {:status 200
+   :headers {"Content-Type" "application/json"}
+   :body (json/generate-string data)})
