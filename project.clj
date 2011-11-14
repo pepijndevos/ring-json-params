@@ -2,4 +2,6 @@
   :description "Ring middleware for JSON params parsing."
   :dependencies
    [[org.clojure/clojure "1.3.0"]
-    [clj-json "0.4.3"]])
+    [cheshire "2.0.2"]]
+  :dev-dependencies
+   [[ring-mock "0.1.1"]])
