@@ -10,8 +10,7 @@
   (fn [req]
     (if-let [body (and (json-request? req) (:body req))]
       (let [bstr (slurp body)
-            json-params (try (json/parse-string bstr) (catch Exception e nil))]
-            req* (assoc req
-                   :json-params json-params)
+            json-params (try (json/parse-string bstr) (catch Exception e nil))
+            req* (assoc req :json-params json-params)]
         (handler req*))
       (handler req))))
