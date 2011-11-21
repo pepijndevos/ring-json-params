@@ -1,5 +1,5 @@
-# `ring-json-params`
+# ring-json-params
 
-[Ring](http://github.com/mmcgrana/ring) middleware that augments `:params` according to a parsed JSON request body.
+[Ring](http://github.com/mmcgrana/ring) middleware that creates `:json-params` according to a parsed JSON request body.
 
-Takes optional parameter `json-key`, if given wraps the JSON parameters in it's own map: `{json-key parsed-json}`. (Useful if the JSON expected does not merge into a map elegantly, for example an array of numbers.)
+Also includes an utility for generating JSON responses.
